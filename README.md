@@ -8,10 +8,20 @@ Le département de paiement de la banque est amené à recevoir des messages de 
 - Spring Boot 3
 - Spring Data JPA
 - Spring Web
-- cache caffeine
+- Cache caffeine
 - Spring Actuator
 - Swagger
 - IBM MQ
+- Liquibase
+
+**Base de données:**  
+PostgreSQL  
+nom de la base: bankDataBase  
+nom du schéma: bank_schema  
+Liquibase génère automatiquement les tables et gère les changements  
+
+**Queue IBM:** 
+BANK.QUEUE
 
 **URL doc Swagger:**  
 http://localhost:8080/swagger-ui.html
