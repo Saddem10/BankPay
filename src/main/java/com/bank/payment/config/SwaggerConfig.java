@@ -14,6 +14,6 @@ public class SwaggerConfig {
             .info(new Info()
                 .title("Bank Payment API")
                 .version("1.0.0")
-                .description("documentation API pour le système de traitement des messages MQ et des partenaires"));
+                .description("**documentation API pour le système de traitement des messages MQ et des partenaires**"));
     }
 }
