@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bank.payment.dto.MessageDTO;
-import com.bank.payment.model.Message;
 import com.bank.payment.service.MessageService;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -58,7 +57,6 @@ public class MessageController {
 	@Operation(summary = "Envoyer un message", description = "Envoie un message à la file IBM MQ avec le contenu, l'expéditeur et la date de réception.")
 	public ResponseEntity<Map<String, ?>> sendMessage(@RequestBody MessageDTO messageDTO) {
 		log.debug("REST request to send a message");
-		// Set received time to now
 		messageDTO.setReceivedAt(LocalDateTime.now());
 
 		jmsTemplate.send(queueName, (Session session) -> {

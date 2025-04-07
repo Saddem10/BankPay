@@ -117,11 +117,4 @@ public class MessageControllerIT {
 				.build();
 	}
 
-//	private Message createMessage(String sender, String content) {
-//		return Message.builder()
-//				.sender(sender)
-//				.content(content)
-//				.receivedAt(LocalDateTime.now())
-//				.build();
-//	}
 }
