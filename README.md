@@ -8,6 +8,7 @@ Le département de paiement de la banque est amené à recevoir des messages de 
 - Spring Boot 3
 - Spring Data JPA
 - Spring Web
+- cache caffeine
 - Spring Actuator
 - Swagger
 - IBM MQ
