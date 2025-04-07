@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    
+    <changeSet id="001" author="Saddem">
+        <!-- Utiliser le schéma bank_schema -->
+        <createTable schemaName="bank_schema" tableName="message">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="content" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sender" type="varchar(100)">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="received_at" type="timestamp">
+       		    <constraints nullable="false"/>
+       		</column>
+        </createTable>
+
+        <createTable schemaName="bank_schema" tableName="partner">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="alias" type="varchar(100)">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="type" type="varchar(100)">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="direction" type="varchar(100)"/>
+            <column name="application" type="varchar(100)"/>
+            <column name="processed_flow_type" type="varchar(100)"/>
+            <column name="description" type="text">
+            	<constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
