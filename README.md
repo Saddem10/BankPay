@@ -28,3 +28,8 @@ http://localhost:8080/swagger-ui.html
 
 **URL actuator:**   
 http://localhost:8080/actuator
+
+❗ **NB: **   
+l'API sendMessage(/mq/send) n'est pas supposée être dans cette application mais plutôt dans un autre système (celui qui va mettre les messages dans la queue), il est là juste pour simuler l'opération d'envoi des messages dans la queue, cette application présume que le contrat fait entre les deux équipes est de déposer les messages sous la forme: **expéditeur|contenu du message|date d'envoi**   
+-> il existe un bouton sur le front appelé "mettre un message dans la queue" pour simuler l'opération
+
